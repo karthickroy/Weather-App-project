@@ -82,3 +82,12 @@ document.querySelector(".submit-button").addEventListener("click", function () {
       errorEl.style.display = "block";
     });
 });
+const toggle = document.getElementById("modeToggle");
+const icon = document.querySelector(".icon");
+const card = document.querySelector(".card-container");
+
+toggle.addEventListener("change", () => {
+  const isDark = toggle.checked;
+  card.classList.toggle("dark-mode", isDark);
+  icon.textContent = isDark ? "🌙" : "🌞";
+});

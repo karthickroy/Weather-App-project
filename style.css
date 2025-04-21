@@ -22,7 +22,7 @@ body {
   width: 300px;
 
   width: 250px;
-  height: 250px !important;
+  height: 258px !important;
   background-color: #fff;
   /* text-decoration: underline; */
   border-radius: 5px;
@@ -43,6 +43,7 @@ body {
   font-size: 15px;
   font-weight: bold;
   font-family: Helvetica, sans-serif;
+  margin-top: 4px;
 }
 .line hr {
   border: none;
@@ -230,9 +231,6 @@ p {
   padding: 0;
 }
 
-body {
-}
-
 .compass {
   width: 400px;
   height: 400px;
@@ -392,4 +390,59 @@ body {
   body {
     height: 100vh;
   }
+}
+/* Default light mode */
+.card-container {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Dark mode only affects card */
+.card-container.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.card-container.dark-mode p {
+  color: #fff;
+}
+.card-container.dark-mode .submit-button {
+  background-color: #c1c1c1;
+  color: #000;
+}
+/* Toggle styling */
+.theme-toggle {
+  width: 60px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 34px;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.4s;
+  margin-top: 12px;
+  height: 60%;
+  width: 60%;
+}
+
+.slider .icon {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  font-size: 12px;
+  transition: transform 0.4s;
+}
+
+.theme-toggle input:checked + .slider .icon {
+  transform: translateX(16px);
 }
