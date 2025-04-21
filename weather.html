@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container-1">
+      <div class="card-1">
+        <div class="header-section">
+          <a href="./index.html">
+            <img src="./assets/arrow-left.svg" alt="" />
+          </a>
+          <p>Weather App</p>
+          <div class="compass">
+            <div class="compass-inner"><div class="north">N</div><div class="east">E</div><div class="west">W</div><div class="south">S</div><div class="main-arrow"><div class="arrow-up"></div><div class="arrow-down"></div></div></div>
+            </div>
+        </div>
+        <div class="line">
+          <hr />
+        </div>
+        <div class="image">
+          <img src="./assets/weather-icon.svg" class="weather-img" alt="" />
+          <h2 class="temperature">13°C</h2>
+          <p class="weather-details">Broken Clouds</p>
+        </div>
+        <div class="location">
+          <img src="./assets/location-position.svg" alt="" />
+          <p class="city">Kathmandu,Nepal</p>
+        </div>
+     <div class="body-img">
+      <img src="./assets/wind.svg" alt="">
+      <p class="wind-speed">12.2 km/hr</p>
+
+     </div>
+        <div class="footer">
+          <div class="footer-section">
+            <div class="footer-left">
+
+              <div class="temp-img">
+                <img src="./assets/temperature-hot.svg" alt="">
+              </div>
+              <div class="temp-details">
+                <span class="temper">
+                  17°C
+                </span>
+                <span class="feels-like">Feels Like</span>
+              </div>
+            </div>
+            <div class="footer-right">
+
+              <div class="humidity-img">
+              <img src="./assets/humidity.svg" alt="">
+              </div>
+              <div class="humidity-details">
+                <span class="humidity-detail">84%</span>
+                <span>Humidity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  </body>
+  <script src="script.js">
+    checkWeather()
+  </script>
+</html>
