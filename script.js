@@ -9,7 +9,7 @@ async function checkWeather(city) {
   let data = await response.json();
 
   console.log(data);
-  document.querySelector(".temper").innerHTML = `${data.current.temp_c}°C`;
+  // document.querySelector(".temper").innerHTML = `${data.current.temp_c}°C`;
   document.querySelector(
     ".weather-details"
   ).innerHTML = `${data.current.condition.text}`;
@@ -46,14 +46,15 @@ async function checkWeather(city) {
     body.style.backgroundImage = "url('assets/rainy.jpg')";
   } else if (condition.includes("snow")) {
     body.style.backgroundImage = "url('assets/snowy.jpg')";
-    // } else if (condition.includes("Partly Cloudy")) {
-    //   body.style.backgroundImage = "url('assets/partly-clouds.jpg')";
+  } else if (condition.includes("partly Cloudy")) {
+    body.style.backgroundImage = "url('assets/partly-clouds.jpg')";
   } else if (condition.includes("clear")) {
     body.style.backgroundImage = "url('assets/clear.jpg')";
   } else if (condition.includes("Moderate or heavy rain with thunder")) {
     body.style.backgroundImage = "url('assets/thunder-storm.jpg')";
+  } else if (condition.includes("overcast")) {
+    body.style.backgroundImage = "url('assets/overcast.jpg')";
   }
-
   localStorage.setItem("Weather Data", JSON.stringify(data));
 }
 const params = new URLSearchParams(window.location.search);
